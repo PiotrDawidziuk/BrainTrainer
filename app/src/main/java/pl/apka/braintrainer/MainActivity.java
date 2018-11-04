@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         resultTextView.setText("");
 
+        button0.setEnabled(true);
+        button1.setEnabled(true);
+        button2.setEnabled(true);
+        button3.setEnabled(true);
+
+
         new CountDownTimer(30100, 1000) {
             @Override
             public void onTick(long l) {
@@ -61,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
                 resultTextView.setText("Done!");
                 playAgain.setVisibility(View.VISIBLE);
+
+                button0.setEnabled(false);
+                button1.setEnabled(false);
+                button2.setEnabled(false);
+                button3.setEnabled(false);
+
             }
         }.start();
 
