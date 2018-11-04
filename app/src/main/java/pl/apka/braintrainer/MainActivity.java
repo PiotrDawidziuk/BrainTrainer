@@ -1,5 +1,6 @@
 package pl.apka.braintrainer;
 
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,7 +34,35 @@ public class MainActivity extends AppCompatActivity {
     Button button3;
 
     TextView sumTextView;
+    TextView timerTextView;
+    Button playAgain;
 
+    public void playAgain (View view) {
+        score = 0;
+        numberOfQuestions = 0;
+        timerTextView.setText("30s");
+        scoreTextView.setText(score+" / " + numberOfQuestions);
+
+        newQuestion();
+        playAgain.setVisibility(View.INVISIBLE);
+
+
+        new CountDownTimer(5100, 1000) {
+            @Override
+            public void onTick(long l) {
+                timerTextView.setText(String.valueOf(l/1000)+" s");
+            }
+
+            @Override
+            public void onFinish() {
+
+                resultTextView.setText("Done!");
+                playAgain.setVisibility(View.VISIBLE);
+            }
+        }.start();
+
+
+    }
     public void chooseAnswer (View view){
        if ( Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
            resultTextView.setText("Correct!");
@@ -104,6 +133,11 @@ public class MainActivity extends AppCompatActivity {
 
         scoreTextView = findViewById(R.id.pointsTextView);
 
+        timerTextView = findViewById(R.id.timeTextView);
+
+        playAgain = findViewById(R.id.playAgainButton);
+
+        playAgain(timerTextView);
 
     }
 }
