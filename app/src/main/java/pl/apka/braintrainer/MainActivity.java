@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void chooseAnswer (View view){
+
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
