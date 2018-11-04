@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/scoreTextView"
+        android:id="@+id/sumTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -86,7 +86,7 @@
             android:padding="10dp"
             android:tag="0"
             android:text="14"
-            android:textSize="50sp"
+            android:textSize="60sp"
             app:layout_column="0"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
@@ -102,7 +102,7 @@
             android:padding="10dp"
             android:tag="1"
             android:text="14"
-            android:textSize="50sp"
+            android:textSize="60sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
@@ -118,7 +118,7 @@
             android:padding="10dp"
             android:tag="2"
             android:text="14"
-            android:textSize="50sp"
+            android:textSize="60sp"
             app:layout_column="0"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
@@ -134,7 +134,7 @@
             android:padding="10dp"
             android:tag="3"
             android:text="14"
-            android:textSize="50sp"
+            android:textSize="60sp"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
@@ -145,7 +145,7 @@
     </android.support.v7.widget.GridLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
